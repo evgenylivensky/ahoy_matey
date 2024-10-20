@@ -31,7 +31,7 @@ module Ahoy
           event_id: options[:id] || generate_id
         }.select { |_, v| v }
 
-        @store.track_event(data)
+        @store.track_event(**data)
       end
       true
     rescue => e
